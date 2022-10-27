@@ -15,3 +15,19 @@ func numberOfSteps(num int) int {
 
 	return steps
 }
+
+func numberOfStepsBinary(num int) int {
+	steps := 0
+
+	for num != 0 {
+		steps++
+
+		if (num & 1) == 0 {
+			num >>= 1
+		} else {
+			num--
+		}
+	}
+
+	return steps
+}

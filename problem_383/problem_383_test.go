@@ -37,6 +37,14 @@ func Test_canConstruct(t *testing.T) {
 			},
 			want: true,
 		},
+		{
+			name: "Test case with ransomNote = 'aba', magazine = 'aa'",
+			args: args{
+				ransomNote: "aba",
+				magazine:   "aa",
+			},
+			want: false,
+		},
 	}
 
 	for _, tt := range tests {

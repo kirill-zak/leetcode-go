@@ -32,6 +32,30 @@ func Test_intersection(t *testing.T) {
 			},
 			want: []int{4, 9},
 		},
+		{
+			name: "Example 3",
+			args: args{
+				nums1: []int{1, 4},
+				nums2: []int{},
+			},
+			want: []int{},
+		},
+		{
+			name: "Example 4",
+			args: args{
+				nums1: []int{},
+				nums2: []int{4, 6},
+			},
+			want: []int{},
+		},
+		{
+			name: "Example 5",
+			args: args{
+				nums1: []int{},
+				nums2: []int{},
+			},
+			want: []int{},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
